@@ -43,7 +43,9 @@ const Gallery = () => {
             </div>
           ))}
         </div>
-        <ProductCard />
+        <section className="p-10">
+          <ProductCard />
+        </section>
       </div>
     </main>
   );

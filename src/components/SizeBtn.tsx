@@ -4,7 +4,7 @@ type SizeBtnProps = {
 };
 const SizeBtn = ({ isFourteenInch, setIsFourteenInch }: SizeBtnProps) => {
   return (
-    <nav className="flex justify-center gap-2 p-2">
+    <nav className="flex justify-center gap-2 p-2 sticky">
       <button
         className={`${isFourteenInch ? "border-blue" : "border-darkGray"} font-title rounded-l-2xl border-2 px-12 py-8 text-lg`}
         type="button"
