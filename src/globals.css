@@ -14,4 +14,11 @@
 @font-face {
   font-family: body;
   src: url(assets/fonts/SF-Pro-Text-Regular.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: title;
+  src: url(assets/fonts/SF-Pro-Display-Regular.otf);
+  font-weight: 600;
 }
