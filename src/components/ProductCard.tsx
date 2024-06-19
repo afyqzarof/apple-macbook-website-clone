@@ -1,14 +1,16 @@
 import laptopSilver from "../assets/images/laptop-silver.jpeg";
 import chevronBlue from "../assets/icons/chevron-blue.svg";
+import m3 from "../assets/icons/m3.png"
 const ProductCard = () => {
   return (
     <article className="bg-gray rounded-2xl p-6">
       <img src={laptopSilver} alt="laptop" />
       <h3 className="text-xs">Space Grey</h3>
-      <div className="mt-2 flex gap-2">
+      <div className="my-4 flex gap-3">
         <div className="bg-spaceGray outline-blue h-5 w-5 rounded-full outline outline-2 outline-offset-2"></div>
-        <div className="bg-silver h-5 w-5 rounded-full outline-2 outline-offset-2"></div>
+        <div className="bg-silver h-5 w-5 rounded-full outline-2 outline-offset-2 cursor-pointer"></div>
       </div>
+      <img src={m3} alt="m3 chip" className="w-10"/>
       <div className="mt-4">
         <p className="font-title text-lg tracking-wide">8-core CPU</p>
         <p className="font-title text-lg tracking-wide">10-core GPU</p>
