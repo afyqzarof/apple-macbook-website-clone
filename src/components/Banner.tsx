@@ -7,7 +7,7 @@ const Banner = () => {
         <a href="#" className="text-blue hover:underline">
           Learn more
         </a>
-        <img src={chevronBlue} alt="chevron" className="h-2 inline ml-1" />
+        <img src={chevronBlue} alt="chevron" className="ml-1 inline h-2" />
       </p>
     </section>
   );
