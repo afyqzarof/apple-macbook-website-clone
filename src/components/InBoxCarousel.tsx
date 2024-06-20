@@ -49,7 +49,7 @@ const InBoxCarousel = ({ collection }: InBoxCarouselProps) => {
           );
         })}
       </div>
-      <div className="hidden md:flex w-screen bg-[#FAFAFA] justify-center">
+      <div className="hidden md:flex w-screen bg-[#FAFAFA] justify-center md:max-w-[90rem]">
         {collection.map((el: any) => {
           return <img src={el.image} alt="" />;
         })}
