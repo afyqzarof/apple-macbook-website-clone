@@ -3,6 +3,8 @@ import SizeBtn from "./SizeBtn";
 import options from "../data/filter-options.json";
 import ProductCard from "./ProductCard";
 import { useGetLaptopSize } from "../hooks/useGetLaptopSize";
+import InBoxCarousel from "./InBoxCarousel";
+import carouselDetail from "../data/carousel";
 
 const Gallery = () => {
   const [isFourteenInch, setIsFourteenInch] = useState(true);
@@ -23,6 +25,9 @@ const Gallery = () => {
     : options.filter((el) => el.value !== "m3");
   const getDetails = useGetLaptopSize(currentOption);
   const details = getDetails(isFourteenInch ? "fourteenInch" : "sixteenInch");
+  const sets = isFourteenInch
+    ? carouselDetail.fourteenInch
+    : carouselDetail.sixteenInch;
   return (
     <main className="flex flex-col items-center gap-8 overflow-visible">
       <SizeBtn
@@ -51,7 +56,7 @@ const Gallery = () => {
             </div>
           ))}
         </div>
-        <section className="flex flex-col gap-2 p-10">
+        <section className="flex w-full flex-col gap-2 p-10 md:flex-row md:grid-cols-3 md:grid">
           {details.map((detail) => {
             return (
               <div key={detail.id}>
@@ -61,11 +66,13 @@ const Gallery = () => {
                   price={detail.price}
                   colors={detail.colors}
                   chip={detail.chip}
+                  isFourteenInch={isFourteenInch}
                 />
               </div>
             );
           })}
         </section>
+        <InBoxCarousel collection={sets} />
       </div>
     </main>
   );

@@ -1,10 +1,8 @@
 import chevronBlue from "../assets/icons/chevron-blue.svg";
-
 import { ChangeEvent, useState } from "react";
 import { useLaptopImage } from "../hooks/useLaptopImage";
 import { useChipImage } from "../hooks/useChipImage";
 import TruckSvg from "./TruckSvg";
-import BookmarkSvg from "./BookmarkSvg";
 
 type ProductCardProps = {
   specs: string[];
@@ -12,6 +10,7 @@ type ProductCardProps = {
   price: number;
   colors: string[];
   chip: string;
+  isFourteenInch: boolean;
 };
 const ProductCard = ({
   specs,
@@ -19,6 +18,7 @@ const ProductCard = ({
   price,
   colors,
   chip,
+  isFourteenInch,
 }: ProductCardProps) => {
   const handleLaptopImage = useLaptopImage();
   const getChipImage = useChipImage();
@@ -37,11 +37,11 @@ const ProductCard = ({
   };
 
   return (
-    <article className="flex flex-col rounded-2xl bg-gray p-6">
+    <article className="flex flex-col rounded-2xl bg-gray p-6 max-w-96">
       <img
         src={handleLaptopImage(selectedColor)}
         alt="laptop"
-        className="h-11/12 self-center"
+        className={`${isFourteenInch ? "w-72" : "w-96"} self-center`}
       />
       <h3 className="text-xs">Space Grey</h3>
       <div className="my-4 flex gap-3">
@@ -67,12 +67,18 @@ const ProductCard = ({
       <img src={getChipImage(chip)} alt="m3 chip" className="w-10" />
       <div className="mt-4">
         {specs.map((spec) => (
-          <p className="font-title text-lg tracking-wide" key={spec}>{spec}</p>
+          <p className="font-title text-lg tracking-wide" key={spec}>
+            {spec}
+          </p>
         ))}
       </div>
       <div className="mt-4 flex flex-col gap-2">
         {infos.map((info) => {
-          return <p className="text-xs" key={info}>{info}</p>;
+          return (
+            <p className="text-xs" key={info}>
+              {info}
+            </p>
+          );
         })}
       </div>
       <div className="mt-4 flex flex-col gap-4">
