@@ -7,7 +7,7 @@ import headerLinks from "../data/header-items.json";
 
 const Header = () => {
   return (
-    <header className="flex h-10 items-center justify-between p-2 lg:m-auto lg:max-w-[1820px]">
+    <header className="flex h-10 items-center justify-between p-2 lg:m-auto lg:max-w-[1620px]">
       <Link to="/">
         <img src={appleLogo} alt="apple logo" className="w-5" />
       </Link>

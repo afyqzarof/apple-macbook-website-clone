@@ -35,7 +35,7 @@ const ProductPage = () => {
           </button>
         </div>
       </article>
-      <main className="flex flex-col items-center gap-4 p-4 md:flex-row lg:m-auto lg:max-w-[1820px]">
+      <main className="flex flex-col items-center gap-4 p-4 md:flex-row lg:m-auto lg:max-w-[1620px]">
         <div className="flex flex-col items-center gap-4 md:sticky md:top-0 md:flex-1 md:self-start">
           <h1 className="font-title text-2xl md:hidden">
             Customise your 14‑inch MacBook Pro - Space Black
@@ -89,7 +89,7 @@ const ProductPage = () => {
         </div>
       </main>
       <div className="bg-gray w-full">
-        <article className="bottom-0 hidden w-full justify-end gap-4 bg-gray p-4 md:sticky md:flex md:p-10 lg:m-auto lg:max-w-[1820px]">
+        <article className="bottom-0 hidden w-full justify-end gap-4 bg-gray p-4 md:sticky md:flex md:p-10 lg:m-auto lg:max-w-[1620px]">
           <div className="flex flex-col items-end gap-2">
             <p className="font-title text-2xl tracking-wide">
               {formatPrice(fullPrice)} or

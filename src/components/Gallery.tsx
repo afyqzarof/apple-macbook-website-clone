@@ -56,7 +56,7 @@ const Gallery = () => {
             </div>
           ))}
         </div>
-        <section className="flex w-full flex-col items-center gap-2 p-10 md:grid md:grid-cols-3 md:flex-row">
+        <section className="flex w-full flex-col items-center gap-2 p-10 md:grid md:grid-cols-3 md:flex-row md:max-w-[90rem]">
           {details.map((detail) => {
             return (
               <div key={detail.id} className="flex justify-center">
