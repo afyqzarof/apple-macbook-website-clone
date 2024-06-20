@@ -14,10 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route
-            path="14-inch-space-black-apple-m3-max-with-14-core-cpu-and-30-core-gpu-36gb-memory-1tb"
-            element={<ProductPage />}
-          />
+          <Route path="/:id" element={<ProductPage />} />
         </Routes>
       </BrowserRouter>
     </>

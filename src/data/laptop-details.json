@@ -112,6 +112,65 @@
         "Force Touch trackpad",
         "96W USB-C Power Adapter"
       ],
+      "pageInfo": [
+        "Apple M3 Max chip with 14‑core CPU, 30‑core GPU and 16‑core Neural Engine",
+        "36GB unified memory",
+        "1TB SSD storage",
+        "14-inch Liquid Retina XDR display²",
+        "96W USB-C Power Adapter",
+        "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+        "Backlit Magic Keyboard with Touch ID - US English"
+      ],
+      "pageChip": [
+        {
+          "title": "Apple M3 Max chip with 14‑core CPU, 30‑core GPU and 16‑core Neural Engine",
+          "price": 0
+        },
+        {
+          "title": "Apple M3 Max chip with 16‑core CPU, 40‑core GPU and 16‑core Neural Engine",
+          "price": 1200.0
+        }
+      ],
+      "pageMemory": [
+        {
+          "title": "36GB unified memory",
+          "price": 0
+        },
+        {
+          "title": "48GB unified memory",
+          "price": 800.0
+        },
+        {
+          "title": "64GB unified memory",
+          "price": 1600.0
+        },
+        {
+          "title": "96GB unified memory",
+          "price": 3200.0
+        },
+        {
+          "title": "128GB unified memory",
+          "price": 4800.0
+        }
+      ],
+      "pageSsd": [
+        {
+          "title": "1TB SSD storage",
+          "price": 0
+        },
+        {
+          "title": "2TB SSD storage",
+          "price": 1600.0
+        },
+        {
+          "title": "4TB SSD storage",
+          "price": 4000.0
+        },
+        {
+          "title": "8TB SSD storage",
+          "price": 8800.0
+        }
+      ],
       "price": 14799.0
     }
   ],
