@@ -18,18 +18,18 @@ const InBoxCarousel = ({ collection }: InBoxCarouselProps) => {
   };
 
   return (
-    <section className="flex w-full flex-col items-center gap-4 p-4">
+    <section className="flex w-full flex-col items-center gap-4 p-4 md:p-0">
       <h3 className="font-title text-3xl">What's in the box</h3>
-      <article className="flex w-full flex-col items-center gap-4">
+      <article className="flex w-full flex-col items-center gap-4 md:hidden">
         <div
-          className={`${Number(selectedImage) === 1 ? "bg-[center_top_-15rem]" : "bg-center bg-cover"} h-64 w-full bg-no-repeat bg-[#FAFAFA]`}
+          className={`${Number(selectedImage) === 1 ? "bg-[center_top_-15rem]" : "bg-cover bg-center"} h-64 w-full bg-[#FAFAFA] bg-no-repeat`}
           style={{
             backgroundImage: `url(${collection[Number(selectedImage)].image})`,
           }}
         ></div>
         <p>{collection[Number(selectedImage)].name}</p>
       </article>
-      <div className="flex items-center justify-center gap-4">
+      <div className="flex items-center justify-center gap-4 md:hidden">
         {options.map((option) => {
           return (
             <div key={option}>
@@ -47,6 +47,11 @@ const InBoxCarousel = ({ collection }: InBoxCarouselProps) => {
               />
             </div>
           );
+        })}
+      </div>
+      <div className="hidden md:flex">
+        {collection.map((el: any) => {
+          return <img src={el.image} alt="" />;
         })}
       </div>
     </section>

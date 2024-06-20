@@ -1,7 +1,7 @@
 import chevronIcon from "../assets/icons/chevron.svg";
 const SubHeader = () => {
   return (
-    <section className="border-darkGray border-b-2 p-2 text-lg flex justify-between tracking-wide lg:m-auto lg:max-w-[1820px]">
+    <section className="border-darkGray border-b-2 p-2 text-lg flex justify-between tracking-wide lg:m-auto lg:max-w-[1820px]g">
       <h2 className="font-title">
         MacBook Pro
       </h2>

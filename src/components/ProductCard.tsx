@@ -3,6 +3,7 @@ import { ChangeEvent, useState } from "react";
 import { useLaptopImage } from "../hooks/useLaptopImage";
 import { useChipImage } from "../hooks/useChipImage";
 import TruckSvg from "./TruckSvg";
+import { Link } from "react-router-dom";
 
 type ProductCardProps = {
   specs: string[];
@@ -37,7 +38,7 @@ const ProductCard = ({
   };
 
   return (
-    <article className="flex flex-col rounded-2xl bg-gray p-6 max-w-96">
+    <article className="flex max-w-96 flex-col rounded-2xl bg-gray p-6">
       <img
         src={handleLaptopImage(selectedColor)}
         alt="laptop"
@@ -105,9 +106,12 @@ const ProductCard = ({
             Get started
           </p>
         </div>
-        <button className="my-4 rounded-lg bg-blue py-1 text-sm text-white">
+        <Link
+          to="14-inch-space-black-apple-m3-max-with-14-core-cpu-and-30-core-gpu-36gb-memory-1tb"
+          className="my-4 flex items-center justify-center rounded-lg bg-blue py-1 text-sm text-white"
+        >
           Select
-        </button>
+        </Link>
         <div className="flex flex-col gap-1">
           <p className="text-sm font-semibold">Need a moment?</p>
           <p className="text-sm">

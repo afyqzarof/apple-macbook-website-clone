@@ -56,10 +56,10 @@ const Gallery = () => {
             </div>
           ))}
         </div>
-        <section className="flex w-full flex-col gap-2 p-10 md:flex-row md:grid-cols-3 md:grid">
+        <section className="flex w-full flex-col items-center gap-2 p-10 md:grid md:grid-cols-3 md:flex-row">
           {details.map((detail) => {
             return (
-              <div key={detail.id}>
+              <div key={detail.id} className="flex justify-center">
                 <ProductCard
                   specs={detail.specs}
                   infos={detail.infos}
