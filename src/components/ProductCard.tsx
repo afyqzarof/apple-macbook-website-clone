@@ -3,6 +3,8 @@ import chevronBlue from "../assets/icons/chevron-blue.svg";
 import { ChangeEvent, useState } from "react";
 import { useLaptopImage } from "../hooks/useLaptopImage";
 import { useChipImage } from "../hooks/useChipImage";
+import TruckSvg from "./TruckSvg";
+import BookmarkSvg from "./BookmarkSvg";
 
 type ProductCardProps = {
   specs: string[];
@@ -65,12 +67,12 @@ const ProductCard = ({
       <img src={getChipImage(chip)} alt="m3 chip" className="w-10" />
       <div className="mt-4">
         {specs.map((spec) => (
-          <p className="font-title text-lg tracking-wide">{spec}</p>
+          <p className="font-title text-lg tracking-wide" key={spec}>{spec}</p>
         ))}
       </div>
       <div className="mt-4 flex flex-col gap-2">
         {infos.map((info) => {
-          return <p className="text-xs">{info}</p>;
+          return <p className="text-xs" key={info}>{info}</p>;
         })}
       </div>
       <div className="mt-4 flex flex-col gap-4">
@@ -110,13 +112,16 @@ const ProductCard = ({
             Save for later
           </p>
         </div>
-        <div className="flex flex-col">
-          <p className="text-sm font-semibold">Delivery:</p>
-          <p className="text-sm">In Stock</p>
-          <p className="text-sm">Free Shipping</p>
-          <p className="cursor-pointer text-xs text-blue hover:underline">
-            Get delivery dates
-          </p>
+        <div className="flex flex-row gap-2">
+          <TruckSvg />
+          <div>
+            <p className="text-sm font-semibold">Delivery:</p>
+            <p className="text-sm">In Stock</p>
+            <p className="text-sm">Free Shipping</p>
+            <p className="cursor-pointer text-xs text-blue hover:underline">
+              Get delivery dates
+            </p>
+          </div>
         </div>
       </div>
     </article>

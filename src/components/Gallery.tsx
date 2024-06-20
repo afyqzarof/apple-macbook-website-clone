@@ -1,12 +1,13 @@
 import { ChangeEvent, useState } from "react";
 import SizeBtn from "./SizeBtn";
-import filterOptions from "../data/filter-options.json";
+import options from "../data/filter-options.json";
 import ProductCard from "./ProductCard";
-import laptopDetails from "../data/laptop-details.json";
+import { useGetLaptopSize } from "../hooks/useGetLaptopSize";
 
 const Gallery = () => {
   const [isFourteenInch, setIsFourteenInch] = useState(true);
   const [currentOption, setCurrentOption] = useState("all");
+
   const handleFilterChange = (e: ChangeEvent<HTMLInputElement>) => {
     setCurrentOption(e.target.value);
   };
@@ -16,17 +17,14 @@ const Gallery = () => {
     }
     return "bg-gray";
   };
-  const getFourteenInchDetails = () => {
-    if (currentOption === "all") {
-      return laptopDetails.fourteenInch;
-    }
-    return laptopDetails.fourteenInch.filter(
-      (detail) => detail.chip === currentOption,
-    );
-  };
-  const fourteenInchDetails = getFourteenInchDetails();
+
+  const filterOptions = isFourteenInch
+    ? options
+    : options.filter((el) => el.value !== "m3");
+  const getDetails = useGetLaptopSize(currentOption);
+  const details = getDetails(isFourteenInch ? "fourteenInch" : "sixteenInch");
   return (
-    <main className="flex flex-col items-center gap-8">
+    <main className="flex flex-col items-center gap-8 overflow-visible">
       <SizeBtn
         isFourteenInch={isFourteenInch}
         setIsFourteenInch={setIsFourteenInch}
@@ -54,7 +52,7 @@ const Gallery = () => {
           ))}
         </div>
         <section className="flex flex-col gap-2 p-10">
-          {fourteenInchDetails.map((detail) => {
+          {details.map((detail) => {
             return (
               <div key={detail.id}>
                 <ProductCard
