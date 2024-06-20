@@ -4,23 +4,26 @@ type SpecOptionProps = {
   title: string;
   subtitle: string;
   cards: Card[];
+  setPrice: (price: number) => void;
 };
 type Card = {
   title: string;
   price: number;
 };
 
-const SpecOptions = ({ title, subtitle, cards }: SpecOptionProps) => {
-  const [currentOption, setCurrentOption] = useState(cards[0].title);
+const SpecOptions = ({ title, subtitle, cards, setPrice }: SpecOptionProps) => {
+  const [currentOption, setCurrentOption] = useState(cards[0].price);
   const addActiveClass = (value: string) => {
-    if (currentOption === value) {
+    if (currentOption === Number(value)) {
       return "border-blue";
     }
     return "border-darkGray";
   };
 
   const handleFilterChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setCurrentOption(e.target.value);
+    const price = Number(e.target.value);
+    setCurrentOption(price);
+    setPrice(price);
   };
   const getPrice = (price: number) => {
     if (!price) {
@@ -34,13 +37,13 @@ const SpecOptions = ({ title, subtitle, cards }: SpecOptionProps) => {
       <p className="cursor-pointer text-xs text-blue hover:underline">
         {subtitle}
       </p>
-      <div className="flex flex-col gap-2">
+      <div className="flex w-full flex-col gap-2">
         {cards?.map((card) => {
           return (
-            <div className="flex" key={card.title}>
+            <div className="flex w-full" key={card.title}>
               <label
                 htmlFor={card.title}
-                className={`${addActiveClass(card.title)} rounded-xl border-2  p-4 font-semibold tracking-wide`}
+                className={`${addActiveClass(card.price)} w-full rounded-xl border-2 p-4 font-semibold tracking-wide`}
               >
                 {card.title}
                 <p className="font-normal tracking-normal">
@@ -53,7 +56,7 @@ const SpecOptions = ({ title, subtitle, cards }: SpecOptionProps) => {
                 name={title}
                 id={card.title}
                 className="hidden"
-                value={card.title}
+                value={card.price}
               />
             </div>
           );
