@@ -2,6 +2,7 @@ import { ChangeEvent, useState } from "react";
 import SizeBtn from "./SizeBtn";
 import filterOptions from "../data/filter-options.json";
 import ProductCard from "./ProductCard";
+import laptopDetails from "../data/laptop-details.json";
 
 const Gallery = () => {
   const [isFourteenInch, setIsFourteenInch] = useState(true);
@@ -15,6 +16,15 @@ const Gallery = () => {
     }
     return "bg-gray";
   };
+  const getFourteenInchDetails = () => {
+    if (currentOption === "all") {
+      return laptopDetails.fourteenInch;
+    }
+    return laptopDetails.fourteenInch.filter(
+      (detail) => detail.chip === currentOption,
+    );
+  };
+  const fourteenInchDetails = getFourteenInchDetails();
   return (
     <main className="flex flex-col items-center gap-8">
       <SizeBtn
@@ -35,7 +45,7 @@ const Gallery = () => {
                 onChange={handleFilterChange}
               ></input>
               <label
-                className={`${addActiveClass(option.value)} font-title cursor-pointer rounded-full px-4 py-2 text-sm`}
+                className={`${addActiveClass(option.value)} cursor-pointer rounded-full px-4 py-2 font-title text-sm`}
                 htmlFor={option.value}
               >
                 {option.name}
@@ -43,8 +53,20 @@ const Gallery = () => {
             </div>
           ))}
         </div>
-        <section className="p-10">
-          <ProductCard />
+        <section className="flex flex-col gap-2 p-10">
+          {fourteenInchDetails.map((detail) => {
+            return (
+              <div key={detail.id}>
+                <ProductCard
+                  specs={detail.specs}
+                  infos={detail.infos}
+                  price={detail.price}
+                  colors={detail.colors}
+                  chip={detail.chip}
+                />
+              </div>
+            );
+          })}
         </section>
       </div>
     </main>

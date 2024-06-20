@@ -1,6 +1,6 @@
 [
   { "name": "All", "value": "all" },
   { "name": "M3", "value": "m3" },
-  { "name": "M3 Pro", "value": "m3Pro" },
-  { "name": "M3 Max", "value": "m3Max" }
+  { "name": "M3 Pro", "value": "m3pro" },
+  { "name": "M3 Max", "value": "m3max" }
 ]

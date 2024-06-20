@@ -1,40 +1,88 @@
-import laptopSilver from "../assets/images/laptop-silver.jpeg";
 import chevronBlue from "../assets/icons/chevron-blue.svg";
-import m3 from "../assets/icons/m3.png"
-const ProductCard = () => {
+
+import { ChangeEvent, useState } from "react";
+import { useLaptopImage } from "../hooks/useLaptopImage";
+import { useChipImage } from "../hooks/useChipImage";
+
+type ProductCardProps = {
+  specs: string[];
+  infos: string[];
+  price: number;
+  colors: string[];
+  chip: string;
+};
+const ProductCard = ({
+  specs,
+  infos,
+  price,
+  colors,
+  chip,
+}: ProductCardProps) => {
+  const handleLaptopImage = useLaptopImage();
+  const getChipImage = useChipImage();
+  const [selectedColor, setSelectedColor] = useState(colors[0]);
+  const instalmentPrice = price / 24;
+
+  const handleColorChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setSelectedColor(e.target.value);
+  };
+
+  const handleOutline = (color: string) => {
+    if (selectedColor === color) {
+      return "outline-blue";
+    }
+    return "outline-none";
+  };
+
   return (
-    <article className="bg-gray rounded-2xl p-6">
-      <img src={laptopSilver} alt="laptop" />
+    <article className="flex flex-col rounded-2xl bg-gray p-6">
+      <img
+        src={handleLaptopImage(selectedColor)}
+        alt="laptop"
+        className="h-11/12 self-center"
+      />
       <h3 className="text-xs">Space Grey</h3>
       <div className="my-4 flex gap-3">
-        <div className="bg-spaceGray outline-blue h-5 w-5 rounded-full outline outline-2 outline-offset-2"></div>
-        <div className="bg-silver h-5 w-5 rounded-full outline-2 outline-offset-2 cursor-pointer"></div>
+        {colors.map((color) => {
+          return (
+            <div className="h-5 w-5" key={color}>
+              <label
+                className={`bg-${color} ${handleOutline(color)} flex h-5 w-5 cursor-pointer rounded-full outline outline-2 outline-offset-2`}
+                htmlFor={color}
+              ></label>
+              <input
+                type="radio"
+                name="color"
+                id={color}
+                className="hidden"
+                onChange={handleColorChange}
+                value={color}
+              />
+            </div>
+          );
+        })}
       </div>
-      <img src={m3} alt="m3 chip" className="w-10"/>
+      <img src={getChipImage(chip)} alt="m3 chip" className="w-10" />
       <div className="mt-4">
-        <p className="font-title text-lg tracking-wide">8-core CPU</p>
-        <p className="font-title text-lg tracking-wide">10-core GPU</p>
-        <p className="font-title text-lg tracking-wide">8GB Unified Memory</p>
-        <p className="font-title text-lg tracking-wide">512GB SSD Storage¹</p>
+        {specs.map((spec) => (
+          <p className="font-title text-lg tracking-wide">{spec}</p>
+        ))}
       </div>
       <div className="mt-4 flex flex-col gap-2">
-        <p className="text-xs">14-inch Liquid Retina XDR display²</p>
-        <p className="text-xs">
-          Two Thunderbolt / USB 4 ports, HDMI port, SDXC card slot, headphone
-          jack, MagSafe 3 port
-        </p>
-        <p className="text-xs">Magic Keyboard with Touch ID</p>
-        <p className="text-xs">14-inch Liquid Retina XDR display²</p>
-        <p className="text-xs">14-inch Liquid Retina XDR display²</p>
+        {infos.map((info) => {
+          return <p className="text-xs">{info}</p>;
+        })}
       </div>
       <div className="mt-4 flex flex-col gap-4">
-        <p className="font-title text-2xl tracking-wide">RM 7,499.00</p>
+        <p className="font-title text-2xl tracking-wide">
+          RM {price.toLocaleString("en", { minimumFractionDigits: 2 })}
+        </p>
         <p className="">or</p>
         <p className="font-title text-2xl tracking-wide">
-          RM 312.46/mo.per month for 24 mo.*
+          RM {instalmentPrice.toFixed(2)}/mo.per month for 24 mo.*
         </p>
         <div className="flex items-center gap-2">
-          <p className="text-blue cursor-pointer text-xs hover:underline">
+          <p className="cursor-pointer text-xs text-blue hover:underline">
             Explore monthly instalment options
           </p>
           <img src={chevronBlue} alt="chevron" className="h-3" />
@@ -45,11 +93,11 @@ const ProductCard = () => {
             Get credit towards a new Mac when you trade in your eligible
             computer. Or recycle it for free.**
           </p>
-          <p className="text-blue cursor-pointer text-xs hover:underline">
+          <p className="cursor-pointer text-xs text-blue hover:underline">
             Get started
           </p>
         </div>
-        <button className="bg-blue my-4 rounded-lg py-1 text-sm text-white">
+        <button className="my-4 rounded-lg bg-blue py-1 text-sm text-white">
           Select
         </button>
         <div className="flex flex-col gap-1">
@@ -58,7 +106,7 @@ const ProductCard = () => {
             Keep all your selections by saving this device to Your Saves, then
             come back anytime and pick up right where you left off.
           </p>
-          <p className="text-blue cursor-pointer text-xs hover:underline">
+          <p className="cursor-pointer text-xs text-blue hover:underline">
             Save for later
           </p>
         </div>
@@ -66,7 +114,7 @@ const ProductCard = () => {
           <p className="text-sm font-semibold">Delivery:</p>
           <p className="text-sm">In Stock</p>
           <p className="text-sm">Free Shipping</p>
-          <p className="text-blue cursor-pointer text-xs hover:underline">
+          <p className="cursor-pointer text-xs text-blue hover:underline">
             Get delivery dates
           </p>
         </div>

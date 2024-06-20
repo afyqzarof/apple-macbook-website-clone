@@ -1,7 +1,8 @@
 {
   "fourteenInch": [
     {
-      "color": ["spaceGray", "silver"],
+      "id": 1,
+      "colors": ["spaceGray", "silver"],
       "chip": "m3",
       "specs": [
         "8-core CPU",
@@ -9,7 +10,7 @@
         "8GB Unified Memory",
         "512GB SSD Storage¹"
       ],
-      "details": [
+      "infos": [
         "14-inch Liquid Retina XDR display²",
         "Two Thunderbolt / USB 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
         "Magic Keyboard with Touch ID",
@@ -19,7 +20,8 @@
       "price": 7499.0
     },
     {
-      "color": ["spaceGray", "silver"],
+      "id": 2,
+      "colors": ["spaceGray", "silver"],
       "chip": "m3",
       "specs": [
         "8-core CPU",
@@ -27,7 +29,7 @@
         "8GB Unified Memory",
         "1TB SSD Storage¹"
       ],
-      "details": [
+      "infos": [
         "14-inch Liquid Retina XDR display²",
         "Two Thunderbolt / USB 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
         "Magic Keyboard with Touch ID",
@@ -37,7 +39,8 @@
       "price": 8299.0
     },
     {
-      "color": ["spaceGray", "silver"],
+      "id": 3,
+      "colors": ["spaceGray", "silver"],
       "chip": "m3",
       "specs": [
         "8-core CPU",
@@ -45,7 +48,7 @@
         "16GB Unified Memory",
         "1TB SSD Storage¹"
       ],
-      "details": [
+      "infos": [
         "14-inch Liquid Retina XDR display²",
         "Two Thunderbolt / USB 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
         "Magic Keyboard with Touch ID",
@@ -55,7 +58,8 @@
       "price": 9099.0
     },
     {
-      "color": ["black", "silver"],
+      "id": 4,
+      "colors": ["black", "silver"],
       "chip": "m3pro",
       "specs": [
         "11-core CPU",
@@ -63,17 +67,18 @@
         "18GB Unified Memory",
         "512GB SSD Storage¹"
       ],
-      "details": [
+      "infos": [
         "14-inch Liquid Retina XDR display²",
         "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
         "Magic Keyboard with Touch ID",
         "Force Touch trackpad",
         "70W USB-C Power Adapter"
       ],
-      "price": 9999.00
+      "price": 9999.0
     },
     {
-      "color": ["black", "silver"],
+      "id": 5,
+      "colors": ["black", "silver"],
       "chip": "m3pro",
       "specs": [
         "12-core CPU",
@@ -81,32 +86,33 @@
         "18GB Unified Memory",
         "1TB SSD Storage¹"
       ],
-      "details": [
+      "infos": [
         "14-inch Liquid Retina XDR display²",
         "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
         "Magic Keyboard with Touch ID",
         "Force Touch trackpad",
         "96W USB-C Power Adapter"
       ],
-      "price": 11599.00
+      "price": 11599.0
     },
     {
-      "color": ["black", "silver"],
-      "chip": "m3pro",
+      "id": 6,
+      "colors": ["black", "silver"],
+      "chip": "m3max",
       "specs": [
         "14-core CPU",
         "30-core GPU",
         "36GB Unified Memory",
         "1TB SSD Storage¹"
       ],
-      "details": [
+      "infos": [
         "14-inch Liquid Retina XDR display²",
         "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
         "Magic Keyboard with Touch ID",
         "Force Touch trackpad",
         "96W USB-C Power Adapter"
       ],
-      "price":  14799.00
+      "price": 14799.0
     }
   ]
 }
