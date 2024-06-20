@@ -8,10 +8,10 @@ import ProductPage from "./pages/ProductPage";
 function App() {
   return (
     <>
-      <Header />
-      <SubHeader />
-      <Banner />
       <BrowserRouter>
+        <Header />
+        <SubHeader />
+        <Banner />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/:id" element={<ProductPage />} />

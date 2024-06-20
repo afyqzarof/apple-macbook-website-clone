@@ -13,8 +13,8 @@ type Card = {
 
 const SpecOptions = ({ title, subtitle, cards, setPrice }: SpecOptionProps) => {
   const [currentOption, setCurrentOption] = useState(cards[0].price);
-  const addActiveClass = (value: string) => {
-    if (currentOption === Number(value)) {
+  const addActiveClass = (value: number) => {
+    if (currentOption === value) {
       return "border-blue";
     }
     return "border-darkGray";
@@ -33,8 +33,8 @@ const SpecOptions = ({ title, subtitle, cards, setPrice }: SpecOptionProps) => {
   };
   return (
     <section className="flex w-full flex-col items-start gap-4">
-      <h3>{title}</h3>
-      <p className="cursor-pointer text-xs text-blue hover:underline">
+      <h3 className="md:text-2xl">{title}</h3>
+      <p className="cursor-pointer text-xs text-blue hover:underline md:text-base">
         {subtitle}
       </p>
       <div className="flex w-full flex-col gap-2">
