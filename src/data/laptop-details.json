@@ -1,0 +1,255 @@
+{
+  "fourteenInch": [
+    {
+      "id": "14-inch-space-grey-apple-m3-chip-with-8-core-cpu-and-10-core-gpu-8gb-memory-512gb",
+      "colors": ["spaceGray", "silver"],
+      "chip": "m3",
+      "specs": [
+        "8-core CPU",
+        "10-core GPU",
+        "8GB Unified Memory",
+        "512GB SSD Storage¹"
+      ],
+      "infos": [
+        "14-inch Liquid Retina XDR display²",
+        "Two Thunderbolt / USB 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+        "Magic Keyboard with Touch ID",
+        "Force Touch trackpad",
+        "70W USB-C Power Adapter"
+      ],
+      "price": 7499.0
+    },
+    {
+      "id": "14-inch-space-grey-apple-m3-chip-with-8-core-cpu-and-10-core-gpu-8gb-memory-1tb",
+      "colors": ["spaceGray", "silver"],
+      "chip": "m3",
+      "specs": [
+        "8-core CPU",
+        "10-core GPU",
+        "8GB Unified Memory",
+        "1TB SSD Storage¹"
+      ],
+      "infos": [
+        "14-inch Liquid Retina XDR display²",
+        "Two Thunderbolt / USB 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+        "Magic Keyboard with Touch ID",
+        "Force Touch trackpad",
+        "70W USB-C Power Adapter"
+      ],
+      "price": 8299.0
+    },
+    {
+      "id": "14-inch-space-grey-apple-m3-chip-with-8-core-cpu-and-10-core-gpu-16gb-memory-1tb",
+      "colors": ["spaceGray", "silver"],
+      "chip": "m3",
+      "specs": [
+        "8-core CPU",
+        "10-core GPU",
+        "16GB Unified Memory",
+        "1TB SSD Storage¹"
+      ],
+      "infos": [
+        "14-inch Liquid Retina XDR display²",
+        "Two Thunderbolt / USB 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+        "Magic Keyboard with Touch ID",
+        "Force Touch trackpad",
+        "70W USB-C Power Adapter"
+      ],
+      "price": 9099.0
+    },
+    {
+      "id": "14-inch-space-black-apple-m3-pro-with-11-core-cpu-and-14-core-gpu-18gb-memory-512gb",
+      "colors": ["black", "silver"],
+      "chip": "m3pro",
+      "specs": [
+        "11-core CPU",
+        "12-core GPU",
+        "18GB Unified Memory",
+        "512GB SSD Storage¹"
+      ],
+      "infos": [
+        "14-inch Liquid Retina XDR display²",
+        "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+        "Magic Keyboard with Touch ID",
+        "Force Touch trackpad",
+        "70W USB-C Power Adapter"
+      ],
+      "price": 9999.0
+    },
+    {
+      "id": "14-inch-space-black-apple-m3-pro-with-12-core-cpu-and-18-core-gpu-18gb-memory-1tb",
+      "colors": ["black", "silver"],
+      "chip": "m3pro",
+      "specs": [
+        "12-core CPU",
+        "18-core GPU",
+        "18GB Unified Memory",
+        "1TB SSD Storage¹"
+      ],
+      "infos": [
+        "14-inch Liquid Retina XDR display²",
+        "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+        "Magic Keyboard with Touch ID",
+        "Force Touch trackpad",
+        "96W USB-C Power Adapter"
+      ],
+      "price": 11599.0
+    },
+    {
+      "id": "14-inch-space-black-apple-m3-max-with-14-core-cpu-and-30-core-gpu-36gb-memory-1tb",
+      "colors": ["black", "silver"],
+      "chip": "m3max",
+      "specs": [
+        "14-core CPU",
+        "30-core GPU",
+        "36GB Unified Memory",
+        "1TB SSD Storage¹"
+      ],
+      "infos": [
+        "14-inch Liquid Retina XDR display²",
+        "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+        "Magic Keyboard with Touch ID",
+        "Force Touch trackpad",
+        "96W USB-C Power Adapter"
+      ],
+      "pageInfo": [
+        "Apple M3 Max chip with 14‑core CPU, 30‑core GPU and 16‑core Neural Engine",
+        "36GB unified memory",
+        "1TB SSD storage",
+        "14-inch Liquid Retina XDR display²",
+        "96W USB-C Power Adapter",
+        "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+        "Backlit Magic Keyboard with Touch ID - US English"
+      ],
+      "pageChip": [
+        {
+          "title": "Apple M3 Max chip with 14‑core CPU, 30‑core GPU and 16‑core Neural Engine",
+          "price": 0
+        },
+        {
+          "title": "Apple M3 Max chip with 16‑core CPU, 40‑core GPU and 16‑core Neural Engine",
+          "price": 1200.0
+        }
+      ],
+      "pageMemory": [
+        {
+          "title": "36GB unified memory",
+          "price": 0
+        },
+        {
+          "title": "48GB unified memory",
+          "price": 800.0
+        },
+        {
+          "title": "64GB unified memory",
+          "price": 1600.0
+        },
+        {
+          "title": "96GB unified memory",
+          "price": 3200.0
+        },
+        {
+          "title": "128GB unified memory",
+          "price": 4800.0
+        }
+      ],
+      "pageSsd": [
+        {
+          "title": "1TB SSD storage",
+          "price": 0
+        },
+        {
+          "title": "2TB SSD storage",
+          "price": 1600.0
+        },
+        {
+          "title": "4TB SSD storage",
+          "price": 4000.0
+        },
+        {
+          "title": "8TB SSD storage",
+          "price": 8800.0
+        }
+      ],
+      "price": 14799.0
+    }
+  ],
+  "sixteenInch": [
+    {
+      "id": "16-inch-space-black-apple-m3-pro-with-12-core-cpu-and-18-core-gpu-18gb-memory-512gb",
+      "colors": ["black", "silver"],
+      "chip": "m3pro",
+      "specs": [
+        "12-core CPU",
+        "18-core GPU",
+        "18GB Unified Memory",
+        "512GB SSD Storage¹"
+      ],
+      "infos": [
+        "16-inch Liquid Retina XDR display²",
+        "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+        "Magic Keyboard with Touch ID",
+        "Force Touch trackpad",
+        "140W USB-C Power Adapter"
+      ],
+      "price": 11999.0
+    },
+    {
+      "id": "16-inch-space-black-apple-m3-pro-with-12-core-cpu-and-18-core-gpu-36gb-memory-512gb",
+      "colors": ["black", "silver"],
+      "chip": "m3pro",
+      "specs": [
+        "12-core CPU",
+        "18-core GPU",
+        "36GB Unified Memory",
+        "512GB SSD Storage¹"
+      ],
+      "infos": [
+        "16-inch Liquid Retina XDR display²",
+        "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+        "Magic Keyboard with Touch ID",
+        "Force Touch trackpad",
+        "140W USB-C Power Adapter"
+      ],
+      "price": 13599.0
+    },
+    {
+      "id": "16-inch-space-black-apple-m3-max-with-14-core-cpu-and-30-core-gpu-36gb-memory-1tb",
+      "colors": ["black", "silver"],
+      "chip": "m3max",
+      "specs": [
+        "14-core CPU",
+        "18-core GPU",
+        "36GB Unified Memory",
+        "1TB SSD Storage¹"
+      ],
+      "infos": [
+        "16-inch Liquid Retina XDR display²",
+        "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+        "Magic Keyboard with Touch ID",
+        "Force Touch trackpad",
+        "140W USB-C Power Adapter"
+      ],
+      "price": 15999.0
+    },
+    {
+      "id": "16-inch-space-black-apple-m3-max-with-16-core-cpu-and-40-core-gpu-48gb-memory-1tb",
+      "colors": ["black", "silver"],
+      "chip": "m3max",
+      "specs": [
+        "16-core CPU",
+        "40-core GPU",
+        "48GB Unified Memory",
+        "1TB SSD Storage¹"
+      ],
+      "infos": [
+        "16-inch Liquid Retina XDR display²",
+        "Three Thunderbolt 4 ports, HDMI port, SDXC card slot, headphone jack, MagSafe 3 port",
+        "Magic Keyboard with Touch ID",
+        "Force Touch trackpad",
+        "140W USB-C Power Adapter"
+      ],
+      "price": 17999.0
+    }
+  ]
+}
