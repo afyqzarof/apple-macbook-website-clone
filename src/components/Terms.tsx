@@ -1,12 +1,16 @@
-import terms from "../data/tnc-main.json";
+type TermsProps = {
+  terms: string[];
+};
 
-const Terms = () => {
+const Terms = ({ terms }: TermsProps) => {
   return (
-    <section className="bg-gray p-4 flex flex-col gap-4">
-      {terms.map((term) => {
-        return <p className="text-xs">{term}</p>;
-      })}
-    </section>
+    <div className="bg-gray">
+      <section className="flex flex-col gap-4 bg-gray p-4 lg:m-auto lg:max-w-[1620px]">
+        {terms.map((term) => {
+          return <p className="text-xs">{term}</p>;
+        })}
+      </section>
+    </div>
   );
 };
 

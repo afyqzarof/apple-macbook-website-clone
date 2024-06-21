@@ -12,6 +12,7 @@ type ProductCardProps = {
   colors: string[];
   chip: string;
   isFourteenInch: boolean;
+  id: string;
 };
 const ProductCard = ({
   specs,
@@ -20,6 +21,7 @@ const ProductCard = ({
   colors,
   chip,
   isFourteenInch,
+  id,
 }: ProductCardProps) => {
   const handleLaptopImage = useLaptopImage();
   const getChipImage = useChipImage();
@@ -37,6 +39,18 @@ const ProductCard = ({
     return "outline-none";
   };
 
+  const getBgColor = (color: string) => {
+    switch (color) {
+      case "black":
+        return "bg-black";
+      case "spaceGray":
+        return "bg-spaceGray";
+      case "silver":
+        return "bg-silver";
+      default:
+        return "";
+    }
+  };
   return (
     <article className="flex max-w-96 flex-col rounded-2xl bg-gray p-6">
       <img
@@ -50,13 +64,13 @@ const ProductCard = ({
           return (
             <div className="h-5 w-5" key={color}>
               <label
-                className={`bg-${color} ${handleOutline(color)} flex h-5 w-5 cursor-pointer rounded-full outline outline-2 outline-offset-2`}
-                htmlFor={color}
+                className={`${getBgColor(color)} ${handleOutline(color)} flex h-5 w-5 cursor-pointer rounded-full outline outline-2 outline-offset-2`}
+                htmlFor={color + id}
               ></label>
               <input
                 type="radio"
                 name="color"
-                id={color}
+                id={color + id}
                 className="hidden"
                 onChange={handleColorChange}
                 value={color}

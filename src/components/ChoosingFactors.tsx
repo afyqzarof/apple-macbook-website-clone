@@ -9,10 +9,10 @@ const ChoosingFactors = () => {
   return (
     <section className="p-10 flex justify-center">
       <article className="flex flex-col gap-4 rounded-2xl bg-gray px-4 py-8 md:max-w-[90rem]">
-        <h4 className="text-center text-lg">
+        <h4 className="text-center text-lg md:text-4xl">
           What to consider when choosing your MacBook Pro.
         </h4>
-        <p className="text-center text-sm">
+        <p className="text-center text-sm md:text-base">
           Configure your laptop on the next step.
         </p>
         <div className="mt-12 flex flex-col gap-12 md:flex-row">

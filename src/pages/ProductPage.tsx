@@ -4,6 +4,8 @@ import laptopImg from "../assets/images/macbook-page.jpeg";
 import SpecOptions from "../components/SpecOptions";
 import { formatPrice } from "../utils/formatPrice";
 import { useState } from "react";
+import Terms from "../components/Terms";
+import tncProduct from "../data/tnc-product.json"
 
 const ProductPage = () => {
   const [chipPrice, setChipPrice] = useState(0);
@@ -88,8 +90,8 @@ const ProductPage = () => {
           />
         </div>
       </main>
-      <div className="bg-gray w-full">
-        <article className="bottom-0 hidden w-full justify-end gap-4 bg-gray p-4 md:sticky md:flex md:p-10 lg:m-auto lg:max-w-[1620px]">
+      <div className="bg-gray w-screen md:fixed bottom-0 hidden md:flex">
+        <article className="w-full justify-end gap-4 bg-gray p-4  md:flex md:p-10 lg:m-auto lg:max-w-[1620px]">
           <div className="flex flex-col items-end gap-2">
             <p className="font-title text-2xl tracking-wide">
               {formatPrice(fullPrice)} or
@@ -108,6 +110,7 @@ const ProductPage = () => {
           </div>
         </article>
       </div>
+      <Terms terms={tncProduct}/>
     </>
   );
 };

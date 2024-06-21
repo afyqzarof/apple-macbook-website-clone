@@ -67,6 +67,7 @@ const Gallery = () => {
                   colors={detail.colors}
                   chip={detail.chip}
                   isFourteenInch={isFourteenInch}
+                  id={detail.id}
                 />
               </div>
             );
