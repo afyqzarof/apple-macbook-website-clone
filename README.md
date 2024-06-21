@@ -33,7 +33,16 @@ npm run dev
 
 ### Mobile:
 
+
+https://github.com/afyqzarof/apple-macbook-website-clone/assets/83950596/dfc185da-f240-4450-9b99-80c43d02d066
+
+
+
 ### Desktop:
+
+
+https://github.com/afyqzarof/apple-macbook-website-clone/assets/83950596/a4a6458d-3064-4ce8-9cc2-a4059025423c
+
 
 ## Improvements to be made
 
